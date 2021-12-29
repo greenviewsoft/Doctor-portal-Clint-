@@ -1,13 +1,9 @@
-import Home from './Pages/Home/Home';
 import './App.css';
-
+import Home from './Pages/Home/Home';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import Appointment from '../src/Pages/Home/Appointment/Appointment';
+import Login from './Pages/Login/Login/Login';
 
 
 function App() {
@@ -15,13 +11,16 @@ function App() {
     <div className="App">
       <Router>
       <Switch>
+          <Route path="/appointment">
+            <Appointment />
+          </Route>
           <Route path="/home">
-            <Home />
+          <Home />
           </Route>
-          <Route path="/users">
-         
+          <Route path="/login">
+          <Login />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
