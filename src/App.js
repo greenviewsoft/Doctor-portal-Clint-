@@ -4,12 +4,15 @@ import React from "react";
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 import Appointment from '../src/Pages/Home/Appointment/Appointment';
 import Login from './Pages/Login/Login/Login';
-//mahabub here  ulta max
+import Register from './Pages/Login/Register/Register';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
+
 
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
       <Switch>
           <Route path="/appointment">
@@ -21,12 +24,16 @@ function App() {
           <Route path="/login">
           <Login />
           </Route>
+          <Route path="/register">
+          <Register />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
         </Switch>
 
       </Router>
+      </AuthProvider>
 
     </div>
   );
