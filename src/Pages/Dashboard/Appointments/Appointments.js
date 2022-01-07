@@ -29,7 +29,7 @@ const Appointments = ({ date }) => {
                         <TableCell>Name</TableCell>
                             <TableCell align="right">Time</TableCell>
                             <TableCell align="right">Service</TableCell>
-                            <TableCell align="right">Action</TableCell>
+                            <TableCell align="right">date</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -43,7 +43,7 @@ const Appointments = ({ date }) => {
                              </TableCell>
                              <TableCell align="right">{row.time}</TableCell>
                              <TableCell align="right">{row.serviceName}</TableCell>
-                             <TableCell align="right">{row.fat}</TableCell>
+                             <TableCell align="right">{row.date}</TableCell>
                          </TableRow>
                         ))}
                     </TableBody>
